@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Hang_Man.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hang_Man"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="FloralWhite">
+        <TextBlock Text="HANGMAN"
+                  FontSize="60"
+                  HorizontalAlignment="Center"/>
+        <TextBlock
+                  FontSize="15"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Right" Margin="0,154,35,0" Width="294" Height="181"><Run Text="The objective of the game Hangman is to"/><LineBreak/><Run Text="guess the word (phrase).  After guessing"/><LineBreak/><Run Text="a word you are going to guess the next one."/><LineBreak/><Run Text="Every time that you fail to guess the letter, "/><LineBreak/><Run Text="the app will draw Hangded Man pictures,"/><LineBreak/><Run Text="step by step. When the app complete to "/><LineBreak/><Run Text="draw Hangded man picture - You Lose the "/><LineBreak/><Run Text="game. You can exit the game Hangman at "/><LineBreak/><Run Text="any time or start a new game!"/></TextBlock>
+        <Button Content ="NEW GAME"
+                FontSize="30"
+                Padding="10"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Margin="0,100,0,0"
+                Click="BT_Click_NewGame"/>
+        <Button Content ="Exit"
+                Background="IndianRed"
+                FontSize="10"
+                Padding="10"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Click="BT_Click_Exit"/>
+        <Button Content=" Easy " 
+                Margin="0,180,0,0"
+                HorizontalAlignment="Center"
+                Click="BT_Click_Easy"
+                VerticalAlignment="Top"/>
+        <Button Content="Hard"
+                Margin="0,230,0,0"
+                HorizontalAlignment="Center"
+                Click="BT_Click_Hard"
+                VerticalAlignment="Top"/>
+        <StackPanel
+            x:Name="WordArea"
+            x:FieldModifier="public"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Background="Beige"
+            Orientation="Horizontal"/>
+        <Image x:Name="imageMiss"
+               x:FieldModifier="public"
+               Source="Images/1.png"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Margin="60,100,0,0"
+               Height="350"
+               Width="300"/>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,20">
+            <StackPanel x:Name="firstRow"
+                        x:FieldModifier="public"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"/>
+            <StackPanel x:Name="secondRow"
+                        x:FieldModifier="public"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"/>
+            <StackPanel x:Name="thirdRow"
+                        x:FieldModifier="public"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>
